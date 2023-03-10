@@ -6,7 +6,7 @@ import frappe.defaults
 from frappe import _
 from frappe.utils import cint
 from redis import WatchError
-import cPickle as pickle, time
+import pickle as pickle, time
 
 redis_cache_retry = 10 #10s
 
