@@ -39,7 +39,7 @@ def redis_transation(data, watch):
 					continue
 	except Exception(e):
 		#no redis started. bench serve was enter?
-		print "frappe redis_transation error {}".format(e)
+		print ("frappe redis_transation error {}").format(e)
 		pass
 
 	return ret
