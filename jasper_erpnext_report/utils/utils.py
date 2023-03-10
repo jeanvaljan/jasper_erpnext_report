@@ -159,10 +159,10 @@ def testHookScriptlet(JasperScriptlet, ids, data, cols, cur_doctype, cur_docname
 			super(MyJasperCustomScripletDefault, self).__init__(JasperScriplet, ids, data, cols, doctype)
 
 		def test(self, args):
-			print "MyJasperCustomScripletDefault method Teste {}".format(args)
+			print ("MyJasperCustomScripletDefault method Teste {}").format(args)
 			return 10
 
-	print "testHookScriptlet Curr_doctype {} Curr_docname {}".format(cur_doctype, cur_docname)
+	print ("testHookScriptlet Curr_doctype {} Curr_docname {}").format(cur_doctype, cur_docname)
 	return MyJasperCustomScripletDefault(JasperScriptlet, ids, data, cols, cur_doctype)
 
 def make_jasper_hooks_path():
@@ -301,7 +301,7 @@ class FrappeContext:
 	def __enter__(self):
 		frappe.init(site=self.site)
 		frappe.connect()
-		print frappe.local.site
+		print (frappe.local.site)
 		frappe.set_user(self.user)
 
 	def __exit__(self, type, value, trace):
